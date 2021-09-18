@@ -4,18 +4,12 @@
   - Postgres for our database
   - knex.js for our database migrations, seeds and queries.
   - express.js for our JSON routes
-- [ ] Create a server folder
-  - [ ] Generate Express App
-  - [ ] git init
-- [ ] Convert Express App to JSON API
-  - [ ] Remove view rendering/views folder
-  - [ ] Remove routes folder
-  - [ ] Remove static serve and public folder
-  - [ ] Update error handler
-  - [ ] Add GET `/` endpoint
-- [ ] Client: Try to make a request
-  - [ ] See the CORS error and remember this moment
-  - [ ] Add CORS to the API
+- [x] Create a ecommerce-app-server folder
+  - [x] Generate Express App
+  - [x] git init
+- [x] Convert Express App to JSON API
+  - [x] Update error handler
+  - [x] Add GET `/` endpoint
 - [ ] Create database
 - [ ] Initialize knex project
   - [ ] Install knex and pg

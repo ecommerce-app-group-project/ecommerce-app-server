@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce-app-server",
+  "version": "1.0.0",
+  "description": "- Server:\r   - Postgres for our database\r   - knex.js for our database migrations, seeds and queries.\r   - express.js for our JSON routes\r - [ ] Create a ecommerce-app-server folder\r   - [ ] Generate Express App\r   - [ ] git init\r - [ ] Convert Express App to JSON API\r   - [ ] Remove view rendering/views folder\r   - [ ] Remove routes folder\r   - [ ] Remove static serve and public folder\r   - [ ] Update error handler\r   - [ ] Add GET `/` endpoint\r - [ ] Client: Try to make a request\r   - [ ] See the CORS error and remember this moment\r   - [ ] Add CORS to the API\r - [ ] Create database\r - [ ] Initialize knex project\r   - [ ] Install knex and pg\r   - [ ] Create knexfile.js\r - [ ] Create product table migration\r - [ ] Seed product table with sample data\r - [ ] Add api folder and create/mount router\r - [ ] Connect to the database\r   - [ ] Create database connection file\r   - [ ] Create a queries file\r - [ ] List all records with GET /api/v1/products",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecommerce-app-group-project/ecommerce-app-server.git"
+  },
+  "author": "w3tsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecommerce-app-group-project/ecommerce-app-server/issues"
+  },
+  "homepage": "https://github.com/ecommerce-app-group-project/ecommerce-app-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
