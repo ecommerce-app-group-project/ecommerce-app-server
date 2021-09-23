@@ -10,10 +10,10 @@
 - [x] Convert Express App to JSON API
   - [x] Update error handler
   - [x] Add GET `/` endpoint
-- [ ] Create database
-- [ ] Initialize knex project
-  - [ ] Install knex and pg
-  - [ ] Create knexfile.js
+- [x] Create database
+- [x] Initialize knex project
+  - [x] Install knex and pg
+  - [x] Create knexfile.js
 - [ ] Create product table migration
 - [ ] Seed product table with sample data
 - [ ] Add api folder and create/mount router
