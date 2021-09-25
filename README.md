@@ -15,8 +15,8 @@
   - [x] Install knex and pg
   - [x] Create knexfile.js
 - [x] Create product table migration
-- [ ] Seed product table with sample data
-- [ ] Add api folder and create/mount router
+- [x] Seed product table with sample data
+- [x] Add api folder and create/mount router
 - [ ] Connect to the database
   - [ ] Create database connection file
   - [ ] Create a queries file

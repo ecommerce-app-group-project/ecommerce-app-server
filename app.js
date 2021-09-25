@@ -3,6 +3,8 @@ const logger = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
 
+const product = require("./api/product");
+
 const app = express();
 
 //middleware
@@ -20,6 +22,8 @@ const corsOptions = {
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
+
+app.use("/api/v1/products", product);
 
 //catch 404 and forward to error handler
 app.use((req, res, next) => {
