@@ -17,9 +17,9 @@
 - [x] Create product table migration
 - [x] Seed product table with sample data
 - [x] Add api folder and create/mount router
-- [ ] Connect to the database
-  - [ ] Create database connection file
-  - [ ] Create a queries file
+- [x] Connect to the database
+  - [x] Create database connection file
+  - [x] Create a queries file
 - [ ] List all records with GET /api/v1/products
 
   - [ ] Create query
