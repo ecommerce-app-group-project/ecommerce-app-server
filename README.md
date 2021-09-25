@@ -25,15 +25,14 @@
   - [x] Create query
   - [x] Create route
 
-- [ ] List all records in /index.html
+- [ ] List all records in /product.js
   - [ ] AJAX Request to GET /products
-  - [ ] Append to DOM
   - [ ] Each product links to /product.html?id=:id
-  - [ ] Display a link to /create.html
-- [ ] Show one record with GET /api/v1/products/:id
-  - [ ] Validate id
-  - [ ] Create query
-  - [ ] Create route
+  - [ ] Display a link to /create.js
+- [x] Show one record with GET /api/v1/products/:id
+  - [x] Validate id
+  - [x] Create query
+  - [x] Create route
 - [ ] Show one record in /product.html?id=:id
   - [ ] Parse query string to get id
   - [ ] AJAX Request to GET /products/:id
