@@ -38,10 +38,10 @@
   - [ ] AJAX Request to GET /products/:id
   - [ ] Append to DOM
   - [ ] Display link to /edit.html?id=:id
-- [ ] Create a record with POST /api/v1/products
-  - [ ] Create route
-  - [ ] Validate product!
-  - [ ] Create query
+- [x] Create a record with POST /api/v1/products
+  - [x] Create route
+  - [x] Validate product!
+  - [x] Create query
 - [ ] Create a record in /new.html
   - [ ] Display a form with input boxes for all fields
   - [ ] Display a button to submit the creation of the resource
