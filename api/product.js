@@ -1,5 +1,5 @@
 const express = require("express");
-const { getOne, create } = require("../db/queries");
+const { getOne, create, update } = require("../db/queries");
 
 const router = express.Router();
 
@@ -17,6 +17,38 @@ function validProduct(product) {
   );
 }
 
+function validId(req, res, next) {
+  if (!isNaN(req.params.id)) {
+    next();
+  } else {
+    const error = new Error("Invalid id");
+    next(error);
+  }
+}
+
+function validProductMiddleware(req, res, next) {
+  if (validProduct(req.body)) {
+    next();
+  } else {
+    const error = new Error("Invalid product");
+    next(error);
+  }
+}
+
+function getProductFromBody(body) {
+  const { title, description, price, quantity, image } = body;
+  //insert into DB
+  const product = {
+    title,
+    description,
+    price,
+    quantity,
+    image,
+  };
+
+  return product;
+}
+
 // /api/v1/products
 
 router.get("/", async (req, res, next) => {
@@ -29,41 +61,31 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/:id", async (req, res, next) => {
-  if (!isNaN(req.params.id)) {
-    const getProduct = await getOne(req.params.id);
-    const product = await getProduct;
-    if (product) {
-      res.json(product);
-    } else {
-      next();
-    }
+router.get("/:id", validId, async (req, res, next) => {
+  const getProduct = await getOne(req.params.id);
+  const product = await getProduct;
+  if (product) {
+    res.json(product);
   } else {
-    const error = new Error("Invalid id");
-    next(error);
+    next();
   }
 });
 
-router.post("/", async (req, res, next) => {
-  if (validProduct(req.body)) {
-    const { title, description, price, quantity, image } = req.body;
-    //insert into DB
-    const product = {
-      title,
-      description,
-      price,
-      quantity,
-      image,
-    };
-    const createProduct = await create(req.body);
-    const id = await createProduct;
-    res.json({
-      id,
-    });
-  } else {
-    const error = new Error("Invalid product");
-    next(error);
-  }
+router.post("/", validProductMiddleware, async (req, res) => {
+  const product = getProductFromBody(req.body);
+  const createProduct = await create(product);
+  const id = await createProduct;
+  res.json({
+    id,
+  });
+});
+
+router.put("/:id", validId, validProductMiddleware, async (req, res) => {
+  const product = getProductFromBody(req.body);
+  const updateProduct = await update(req.params.id, product);
+  res.json({
+    message: "updated",
+  });
 });
 
 module.exports = router;

@@ -42,17 +42,11 @@
   - [x] Create route
   - [x] Validate product!
   - [x] Create query
-- [ ] Create a record in /new.html
-  - [ ] Display a form with input boxes for all fields
-  - [ ] Display a button to submit the creation of the resource
-    - [ ] Validate all inputs
-    - [ ] POST /products
-    - [ ] Successful creation should redirect to /product.html?id=:id
 - [ ] Update a record with PUT /api/v1/products/:id
-  - [ ] Create route
-  - [ ] Validate id
-  - [ ] Validate updates
-  - [ ] Create query
+  - [x] Create route
+  - [x] Validate id
+  - [x] Validate updates
+  - [x] Create query
 - [ ] Update one record in /product.html?id=:id
   - [ ] Display a form with input boxes for all fields
   - [ ] Display a button to submit the update of the resource

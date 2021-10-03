@@ -14,4 +14,7 @@ module.exports = {
         return ids[0];
       });
   },
+  update(id, product) {
+    return connection("product").where("id", id).update(product);
+  },
 };
