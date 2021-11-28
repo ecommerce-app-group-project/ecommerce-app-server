@@ -33,11 +33,6 @@
   - [x] Validate id
   - [x] Create query
   - [x] Create route
-- [ ] Show one record in /product.html?id=:id
-  - [ ] Parse query string to get id
-  - [ ] AJAX Request to GET /products/:id
-  - [ ] Append to DOM
-  - [ ] Display link to /edit.html?id=:id
 - [x] Create a record with POST /api/v1/products
   - [x] Create route
   - [x] Validate product!
@@ -47,16 +42,16 @@
   - [x] Validate id
   - [x] Validate updates
   - [x] Create query
-- [ ] Update one record in /product.html?id=:id
-  - [ ] Display a form with input boxes for all fields
-  - [ ] Display a button to submit the update of the resource
+- [x] Update one record in /product.html?id=:id
+  - [x] Display a form with input boxes for all fields
+  - [x] Display a button to submit the update of the resource
     - [ ] Validate all inputs
     - [ ] PUT /products/:id
     - [ ] Successful update should redirect to /product.html?id=:id
 - [ ] Delete a record with DELETE /api/v1/products/:id
-  - [ ] Create route
-  - [ ] Validate id
-  - [ ] Create query
+  - [x] Create route
+  - [x] Validate id
+  - [x] Create query
 - [ ] Delete a record
   - [ ] Add a delete button to the /product.html page
     - [ ] DELETE /products/:id

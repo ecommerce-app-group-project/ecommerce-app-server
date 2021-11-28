@@ -1,5 +1,5 @@
 const express = require("express");
-const { getOne, create, update } = require("../db/queries");
+const { getOne, create, update, deleteProd } = require("../db/queries");
 
 const router = express.Router();
 
@@ -85,6 +85,13 @@ router.put("/:id", validId, validProductMiddleware, async (req, res) => {
   const updateProduct = await update(req.params.id, product);
   res.json({
     message: "updated",
+  });
+});
+
+router.delete("/:id", validId, async (req, res) => {
+  const deleteProduct = await deleteProd(req.params.id);
+  res.json({
+    message: "Product deleted!",
   });
 });
 
